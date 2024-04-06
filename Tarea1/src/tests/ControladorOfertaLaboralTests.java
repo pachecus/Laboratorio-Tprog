@@ -1149,6 +1149,7 @@ String nombreK = "nombreKeyword";
 	      mu = ManejadorUsuario.getInstancia();
 	      Postulante postu = mu.buscarPostulante(nicknameP);
 	      LocalDate local = LocalDate.now();
+			@SuppressWarnings("unused")
 	      Postulacion pos = new Postulacion(local, "cvReducido","motivacion", postu, Ol, "https://www.youtube.com/watch?v=xZ27YDDYjqY");
 	      controladorUsuario.ingresarPostulacion("CV", "Motivacion", local, nicknameE, nombre, nicknameP, "video");
 
@@ -1261,7 +1262,7 @@ String nombreK = "nombreKeyword";
 	      Postulacion pos = new Postulacion(local, "cvReducido","motivacion", postu, Ol, "https://www.youtube.com/watch?v=xZ27YDDYjqY");
 	      
 	      postu.agregarPostulacion(pos);
-
+			@SuppressWarnings("unused")
 	      String video = controladorOfertaLaboral.obtenerVideoPostulacion(nicknameP, nombre);
 
 
@@ -1467,6 +1468,7 @@ String nombreK = "nombreKeyword";
 			OfertaLaboral Ol = mol.buscarOfertaLaboral(nombre);
 			Ol.setEstado(EstadoOL.Confirmada);
 			mu = ManejadorUsuario.getInstancia();
+			@SuppressWarnings("unused")
 			Postulante postu = mu.buscarPostulante(nicknameP);
 			LocalDate local = LocalDate.now();
 			controladorUsuario.ingresarPostulacion("CVReducido", "motivacion", local, nicknameE, nombre, nicknameP, "");
@@ -1503,6 +1505,7 @@ String nombreK = "nombreKeyword";
 		String correo= "coe1";
 		String descripcion = "dese1";
 		String link = "linke1";
+		@SuppressWarnings("unused")
 		String empresa = nicknameE;
 	
 		

@@ -34,7 +34,9 @@ import logica.OfertaLaboral;
 import logica.Tipo;
 
 class TestVarios {
+	@SuppressWarnings("unused")
 	private static IUsuario cu;
+	@SuppressWarnings("unused")
 	private static IOfertaLaboral col;
 	private ManejadorUsuario mu;
 	private ManejadorTipo tp;
