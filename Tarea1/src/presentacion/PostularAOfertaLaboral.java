@@ -374,15 +374,9 @@ import logica.DTOfertaLaboral;
 		   
 		   
 		   private LocalDate convertirDateALocalDate(Date date) {
-		        // Convertir Date a Instant
 		        Instant instant = date.toInstant();
-
-		        // Obtener ZoneId (Zona horaria)
 		        ZoneId defaultZoneId = ZoneId.systemDefault();
-
-		        // Crear LocalDate a partir de Instant y ZoneId
 		        LocalDate localDate = instant.atZone(defaultZoneId).toLocalDate();
-
 		        return localDate;
 		    }
 

@@ -31,7 +31,6 @@ import jakarta.jws.soap.SOAPBinding.Style;
 import jakarta.xml.ws.Endpoint;
 
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 
 @WebService
@@ -59,7 +58,6 @@ public class WebServices {
 
     @WebMethod(exclude = true)
     public void publicar(){
-         //endpoint = Endpoint.publish("http://localhost:9127/webservices", this);
     	endpoint =  Endpoint.publish("http://"+prop.getProperty("host")+":"+prop.getProperty("port")+"/webservices", this);
     }
 
@@ -396,13 +394,6 @@ public class WebServices {
     	IOfertaLaboral col = fac.getIOfertaLaboral();
     	col.realizarSeleccion(nombreOL, rankings);
     }
-    	
-//    @WebMethod
-//    public void agregarVisualizacion(String nombreOferta) {
-//    	ManejadorOfertaLaboral mol = ManejadorOfertaLaboral.getInstance();
-//    	OfertaLaboral oferta = mol.buscarOfertaLaboral(nombreOferta);
-//    	oferta.agregarVisualizacion();
-//    }
     
     @WebMethod
     public DTOfertaLaboral buscarOfertaLaboral(String nombre) {

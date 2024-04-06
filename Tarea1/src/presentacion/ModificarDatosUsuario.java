@@ -371,7 +371,7 @@ public class ModificarDatosUsuario extends JInternalFrame {
         return matcher.matches();
     }
 	
-	
+	@SuppressWarnings("unused")
 	public boolean CheckForm() {
 		String nombre = textNombre.getText();
 		String apellido = textApellido.getText();

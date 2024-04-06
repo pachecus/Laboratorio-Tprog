@@ -108,8 +108,8 @@ public class CrearPaqueteTiposPublicacionOfertasLaborales extends JInternalFrame
         getContentPane().add(scrollPane, gbc_scrollPane);
         
         textAreaDescripcion = new JTextArea();
-        textAreaDescripcion.setWrapStyleWord(true); // Ajuste de palabras
-        textAreaDescripcion.setLineWrap(true); // Ajuste de líneas
+        textAreaDescripcion.setWrapStyleWord(true); 
+        textAreaDescripcion.setLineWrap(true); 
         textAreaDescripcion.setEditable(true);
         scrollPane.setViewportView(textAreaDescripcion);
         
@@ -316,16 +316,11 @@ public class CrearPaqueteTiposPublicacionOfertasLaborales extends JInternalFrame
 		return true;
 	}
 	
+	@SuppressWarnings("unused")
 	private LocalDate convertirDateALocalDate(Date date) {
-        // Convertir Date a Instant
         Instant instant = date.toInstant();
-
-        // Obtener ZoneId (Zona horaria)
         ZoneId defaultZoneId = ZoneId.systemDefault();
-
-        // Crear LocalDate a partir de Instant y ZoneId
         LocalDate localDate = instant.atZone(defaultZoneId).toLocalDate();
-
         return localDate;
     }
 	

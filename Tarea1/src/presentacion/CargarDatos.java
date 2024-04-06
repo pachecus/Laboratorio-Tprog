@@ -241,14 +241,13 @@ public class CargarDatos {
 			e.printStackTrace();
 		}
 	}
-	
+	@SuppressWarnings("unused")
 	public void ingresarOfertasLaborales() {
 		ManejadorTipo m = ManejadorTipo.getInstancia();
 		ManejadorOfertaLaboral mof = ManejadorOfertaLaboral.getInstance();
 		ManejadorUsuario mu = ManejadorUsuario.getInstancia();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		ControladorOfertaLaboral cof = new ControladorOfertaLaboral();
-		
 		String csvFilePath = "/CSV/OfertasLaborales.csv";
 		
 		try (BufferedReader br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(csvFilePath), "UTF-8"))) {
@@ -275,6 +274,7 @@ public class CargarDatos {
 		}
 	}
 	
+	@SuppressWarnings("unused")
 	public void ingresarKeywordsOfertas() {
 		ManejadorOfertaLaboral mof = ManejadorOfertaLaboral.getInstance();
 		Map<String, Keyword> keywords = mof.getMapKeywords();

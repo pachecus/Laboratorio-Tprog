@@ -280,10 +280,10 @@ public class ConsultaUsuario extends JInternalFrame {
         textFechaNomEmp.setVisible(false);
 	}
 	
+	@SuppressWarnings("unused")
 	public void cargarDatos(String selectedItem) {
 		comboBoxOL.removeAllItems();
 		DTUsuario u = contUsuario.mostrarInformacionUsuario(selectedItem);
-		
 		textNickname.setText(u.getNickname());
 		textNombre.setText(u.getNombre());
 		textApellido.setText(u.getApellido());
@@ -294,9 +294,6 @@ public class ConsultaUsuario extends JInternalFrame {
 			DefaultComboBoxModel<DTOfertaLaboral> modelOL = new DefaultComboBoxModel<DTOfertaLaboral>(ofLab);
 			comboBoxOL.setModel(modelOL);
 		}
-		
-
-
 		
         if(u instanceof DTPostulante) {
         	scrollPaneDescripcion.setVisible(false);

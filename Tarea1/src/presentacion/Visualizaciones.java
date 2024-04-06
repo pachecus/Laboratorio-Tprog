@@ -4,11 +4,9 @@ import java.awt.EventQueue;
 
 import javax.swing.JInternalFrame;
 
+@SuppressWarnings("serial")
 public class Visualizaciones extends JInternalFrame {
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -22,9 +20,6 @@ public class Visualizaciones extends JInternalFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public Visualizaciones() {
 		setBounds(100, 100, 450, 300);
 

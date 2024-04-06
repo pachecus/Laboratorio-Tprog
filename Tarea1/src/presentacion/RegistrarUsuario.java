@@ -58,11 +58,7 @@ public class RegistrarUsuario extends JInternalFrame {
      * Create the frame.
      */
     public RegistrarUsuario(IUsuario iu) {
-        // Se inicializa con la interfaz de usuarios
-    
     	iUsuario = iu;
-        // Propiedades del JInternalFrame como dimensión, posición dentro del frame,
-        // etc.
         setResizable(true);
         setIconifiable(true);
         setMaximizable(true);
@@ -112,7 +108,6 @@ public class RegistrarUsuario extends JInternalFrame {
         ItemListener PostItemListener = new ItemListener() {
 			@Override
 			public void itemStateChanged(ItemEvent e) {
-				// TODO Auto-generated method stub
 				int state = e.getStateChange();
 				if (state == ItemEvent.SELECTED) {
 				    labelFechaNac.setVisible(true);
@@ -338,8 +333,6 @@ public class RegistrarUsuario extends JInternalFrame {
         textPane.setVisible(false);
         textScrollPane.setVisible(false);
     
-    // Un botón (JButton) con un evento asociado que permite cerrar el formulario (solo ocultarlo).
-    // Dado que antes de cerrar se limpia el formulario, se invoca un método reutilizable para ello. 
     btnCancelar = new JButton("Cancelar");
     btnCancelar.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
@@ -413,12 +406,6 @@ public class RegistrarUsuario extends JInternalFrame {
     });
 }
 
-    // Este método es invocado al querer registrar un usuario, funcionalidad
-    // provista por la operación del sistem registrarUsuario().
-    // Previamente se hace una verificación de los campos, particularmente que no sean vacíos
-    // y que la cédula sea un número. 
-    // Tanto en caso de que haya un error (de verificación o de registro) o no, se despliega
-    // un mensaje utilizando un panel de mensaje (JOptionPane).
     protected void cmdRegistroUsuarioActionPerformed(ActionEvent arg0) {
         if(checkForm()) {
     		String contrasenia = new String(passwordField.getPassword());
@@ -553,10 +540,6 @@ public class RegistrarUsuario extends JInternalFrame {
 		return true;
 	}
     
-    // Permite borrar el contenido de un formulario antes de cerrarlo.
-    // Recordar que las ventanas no se destruyen, sino que simplemente 
-    // se ocultan, por lo que conviene borrar la información para que 
-    // no aparezca al mostrarlas nuevamente.
     private void limpiarFormulario() {
     	textField.setText("");
         textFieldNombre.setText("");

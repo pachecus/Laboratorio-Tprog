@@ -40,8 +40,6 @@ import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import java.awt.Font;
 import javax.swing.JList;
-
-import javax.swing.JSpinner;
 import java.text.SimpleDateFormat;
 
 @SuppressWarnings("serial")
@@ -52,8 +50,8 @@ public class AltaOfertaLaboral extends JInternalFrame {
 	
 	private JTextField textFieldNombre;
 	private JTextArea textAreaDescripcion;
-	private JSpinner spinnerHoraInicio;
-	private JSpinner spinnerHoraFin;
+//	private JSpinner spinnerHoraInicio; despues los borro si no se rompe en la prueba
+//	private JSpinner spinnerHoraFin;
 	private JTextField textFieldRemuneracion;
 	private JTextField textFieldCiudad;
 	private JTextField textFieldDepartamento;
@@ -194,13 +192,12 @@ public class AltaOfertaLaboral extends JInternalFrame {
         getContentPane().add(scrollPane_1, gbc_scrollPane_1);
         
         textAreaDescripcion = new JTextArea();
-        textAreaDescripcion.setWrapStyleWord(true); // Ajuste de palabras
-        textAreaDescripcion.setLineWrap(true); // Ajuste de líneas
+        textAreaDescripcion.setWrapStyleWord(true); 
+        textAreaDescripcion.setLineWrap(true); 
         textAreaDescripcion.setEditable(true);
         scrollPane_1.setViewportView(textAreaDescripcion);
         
 
-     // JLabel para describir el campo de horario
         JLabel lblNewLabel_9 = new JLabel("Horario:");
         lblNewLabel_9.setFont(new Font("Tahoma", Font.PLAIN, 12));
         GridBagConstraints gbc_lblNewLabel_9 = new GridBagConstraints();
@@ -219,10 +216,6 @@ public class AltaOfertaLaboral extends JInternalFrame {
         gbc_textFieldHorario.gridy = 10;
         getContentPane().add(textFieldHorario, gbc_textFieldHorario);
         textFieldHorario.setColumns(10);
-        
-
-    
-
 
         JLabel lblNewLabel_6 = new JLabel("Remuneración: ");
         lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -491,16 +484,11 @@ public class AltaOfertaLaboral extends JInternalFrame {
         return matcher.matches();
     }
 	
+	@SuppressWarnings("unused")
 	private LocalDate convertirDateALocalDate(Date date) {
-        // Convertir Date a Instant
         Instant instant = date.toInstant();
-
-        // Obtener ZoneId (Zona horaria)
         ZoneId defaultZoneId = ZoneId.systemDefault();
-
-        // Crear LocalDate a partir de Instant y ZoneId
         LocalDate localDate = instant.atZone(defaultZoneId).toLocalDate();
-
         return localDate;
     }
 	

@@ -106,8 +106,8 @@ public class AltaTipoPublicacionOfertaLaboral extends JInternalFrame {
 	     
 	     textAreaDescripcion = new JTextArea();
 	     scrollPane.setViewportView(textAreaDescripcion);
-	     textAreaDescripcion. setWrapStyleWord(true); // Ajuste de palabras
-	     textAreaDescripcion.setLineWrap(true); // Ajuste de líneas
+	     textAreaDescripcion. setWrapStyleWord(true); 
+	     textAreaDescripcion.setLineWrap(true);
 	     textAreaDescripcion.setEditable(true);
 	     
 	     JLabel lblNewLabel_2 = new JLabel("Exposición:");
@@ -243,17 +243,13 @@ public class AltaTipoPublicacionOfertaLaboral extends JInternalFrame {
 		if(checkFormulario()) {
 			try {
 				ICol.ingresarTipo(nombreT, descripcionT, Integer.parseInt(exposicionT), Integer.parseInt(duracionT), Float.parseFloat(costoT), fechaAlta);
-
-                // Muestro éxito de la operación
                 JOptionPane.showMessageDialog(this, "El Tipo de Publicacion se ha agregado con éxito", "Alta de Tipo de Publicacion de Oferta Laboral",
                         JOptionPane.INFORMATION_MESSAGE);
                 
-                // Limpio el internal frame antes de cerrar la ventana
                 limpiarFormulario();
                 setVisible(false);
 
           } catch (TipoRepetidoException e) {
-                // Muestro error de registro
                 JOptionPane.showMessageDialog(this, e.getMessage(), "Alta de Tipo de Publicacion de Oferta Laboral", JOptionPane.ERROR_MESSAGE);
            }
 

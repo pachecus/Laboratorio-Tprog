@@ -149,7 +149,6 @@ public class Principal {
 		itemRegistro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// VENTANA PARA REGISTRAR USUARIO
-				// EJEMPLO:
 				creUsrInternalFrame.setVisible(true);
 			}
 		});
