@@ -11,8 +11,8 @@ public class Usuario {
 	private String correo;
 	private String contrasenia;
 	private byte[] image;
-	private List<Usuario> usuariosSeguidos = new ArrayList<>();//nuevo atributo tarea3
-	private List<Usuario> seguidores = new ArrayList<>();//nuevo atributo tarea3
+	private List<Usuario> usuariosSeguidos = new ArrayList<>();
+	private List<Usuario> seguidores = new ArrayList<>();
 	
 	public Usuario(String nickname, String nombre, String apellido, String correo) {
 		this.nickname = nickname;
@@ -90,18 +90,13 @@ public class Usuario {
 		this.image = image;
 	}
 	
-	
-	
-	// --- seguir ---
-	
 	public boolean sigue(String nickname) {
 		boolean sigue = false;
 		if(this.usuariosSeguidos != null) {
 			for (int i = 0; i < this.usuariosSeguidos.size(); i++) {
 	            if ( this.usuariosSeguidos.get(i).getNickname().equals(nickname)) {
 	            	sigue = true;
-	            }
-	            	
+	            }	
 	        }
 		}
 		return sigue;

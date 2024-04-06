@@ -115,11 +115,12 @@ public class ControladorUsuario implements IUsuario {
         }  else throw new PostulantesNoExistenException("No existen postulantes");
     }
     
+    @SuppressWarnings("unused")
     public  DTOfertaLaboral[] listarOfertasLaboralesVigentes(String empresa) throws EmpresaSinOfertasException{
     ManejadorUsuario musr = ManejadorUsuario.getInstancia();
         Empresa emp = musr.buscarEmpresa(empresa);
         List<DTOfertaLaboral> ofertas = emp.obtenerOfertasVigentesyConfirmadas();
-        DTOfertaLaboral[] dtofertas;
+		DTOfertaLaboral[] dtofertas;
         if (ofertas != null && ofertas.size() != 0) {
         	 return dtofertas = ofertas.toArray(new DTOfertaLaboral[ofertas.size()]);
         } else {
@@ -129,19 +130,17 @@ public class ControladorUsuario implements IUsuario {
        
     }
     
-    
-   
     public  DTOfertaLaboral[] listarOfertasLaboralesIngresadas(String empresa) throws EmpresaSinOfertasException{
         ManejadorUsuario musr = ManejadorUsuario.getInstancia();
             Empresa emp = musr.buscarEmpresa(empresa);
             DTOfertaLaboral[] ofertas = emp.obtenerOfertasIngresadas();
             if (ofertas != null){
             	return  ofertas;
-            	}
+            }
             else {
             	throw new EmpresaSinOfertasException("La empresa seleccionada no tiene ofertas ingresadas");
-            	}
-        }
+            }
+    }
     
     public void ingresarPostulacion(String CVReducido, String motivacion, LocalDate fecha, String empresa, String oferta, String postulante, String video) throws YaSePostuloException {
         ManejadorUsuario musr = ManejadorUsuario.getInstancia();
@@ -157,7 +156,7 @@ public class ControladorUsuario implements IUsuario {
         }
         else  {
         	throw new YaSePostuloException("El postulante seleccionado ya se ha postulado a esta oferta laboral");
-        	}
+        }
         		
     }
 
@@ -201,7 +200,6 @@ public class ControladorUsuario implements IUsuario {
 	}
 	
 	public DTEmpresa[] listarEmpresas() throws EmpresasNoExistenException, NoExistenEmpresasOfertasLaboralesException {
-
 		 ManejadorUsuario iMU =  ManejadorUsuario.getInstancia();
 		 Empresa[] empresas = iMU.getEmpresas();
 		 boolean hayOL = false;
@@ -266,7 +264,6 @@ public class ControladorUsuario implements IUsuario {
 				ofertasPostulado[iter] = post.getOfertaLaboral().getDataOfertaLaboral();
 				iter++;
 			}
-			
 			return ofertasPostulado;
 		} else {
 			throw new UsuarioSinPostulacionesException("No existen postulaciones."); 
@@ -315,7 +312,6 @@ public class ControladorUsuario implements IUsuario {
     				post.getOfertaLaboral().getEmpresaCreadora().equals(nombreEmp))
     			correcto = true;
     	}
-    	
     	return correcto;
     }
 	
@@ -362,8 +358,8 @@ public class ControladorUsuario implements IUsuario {
 	
 	public DTEmpresa crearDTEmpresa(String nickname, String nom, String apellido, String correo, String contrasenia, 
 			String descripcion, String link, byte[] image) {
-	DTEmpresa dtemp = new DTEmpresa(nickname, nom, apellido, correo, contrasenia, null, descripcion, link, null, image);
-	return dtemp;
+		DTEmpresa dtemp = new DTEmpresa(nickname, nom, apellido, correo, contrasenia, null, descripcion, link, null, image);
+		return dtemp;
 	}
 	
 	public String[] obtenerSeguidores(String nickname) {

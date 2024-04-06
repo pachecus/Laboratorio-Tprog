@@ -25,7 +25,6 @@ public class DTOfertaLaboral {
 	private String dataEmpresa;
 	private byte[] imagen;
 	private boolean rankeada = false;
-	//private DTCompra dataCompra;
 	private int cantidadFav = 0;
 	private String fechaSeleccion = "";
 	
@@ -51,7 +50,6 @@ public class DTOfertaLaboral {
 		this.dataPostulaciones = dataPostulaciones;
 		this.dataEmpresa = dataEmpresa;
 		this.rankeada = rankeada;
-		//this.dataCompra = dataCompra;
 	}
 	
 	

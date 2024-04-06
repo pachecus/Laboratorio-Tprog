@@ -100,10 +100,8 @@ public class Paquete {
 	            if (paqti.getTipo().getNombre() == tip.getNombre())
 	                return false;
 	        }
-	        //No hay link entre Paquete y Tipo
 	        paqti = new PaqueteTipo(cantidad, tip);
 	        this.agregarPaqueteTipo(paqti);
-	        //arrglo del costoAsociado
 	        float costo = (tip.getCosto() * cantidad) *((100-this.descuento)/100);
 	        sumarACosto(costo);
 	        return true;

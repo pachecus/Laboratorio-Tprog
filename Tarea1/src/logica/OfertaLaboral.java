@@ -23,9 +23,9 @@ public class OfertaLaboral {
 	private byte[] imagen;
 	private Empresa empresaCreadora;
 	private boolean rankeada = false;
-	private int cantidadFav;//nuevo atributo tarea3
-	private int cantidadVisitas;
-	private LocalDate fechaSeleccion ;//nuevo atributos tarea3
+	private int cantidadFav;
+//	private int cantidadVisitas; Lo comente para ver si se rompe algo, despues lo borro si anda bien
+	private LocalDate fechaSeleccion ;
 	
 
 	public OfertaLaboral(String nombre, String descripcion, String ciudad, String departamento, String horario,
@@ -45,7 +45,7 @@ public class OfertaLaboral {
 		this.empresaCreadora = empCreadora;
 		this.cantidadFav = 0;
 		this.fechaSeleccion = null;
-		this.cantidadVisitas = 0;
+//		this.cantidadVisitas = 0;
 	}
 	
 	public OfertaLaboral(String nombre, String descripcion, String ciudad, String departamento, String horario,
@@ -66,7 +66,7 @@ public class OfertaLaboral {
         this.setImagen(image);
 		this.cantidadFav = 0;
 		this.fechaSeleccion = null;
-		this.cantidadVisitas = 0;
+//		this.cantidadVisitas = 0;
     }
 
 	public OfertaLaboral(String nombre, String descripcion, String ciudad, String departamento, String horario,
@@ -87,7 +87,7 @@ public class OfertaLaboral {
 		this.setImagen(image);
 		this.cantidadFav = 0;
 		this.fechaSeleccion = null;
-		this.cantidadVisitas = 0;
+//		this.cantidadVisitas = 0;
 	}
 	
 	public OfertaLaboral(String nombre, String descripcion, String ciudad, String departamento, String horario,
@@ -108,7 +108,7 @@ public class OfertaLaboral {
 		this.setImagen(image);
 		this.cantidadFav = 0;
 		this.fechaSeleccion = null;
-		this.cantidadVisitas = 0;
+//		this.cantidadVisitas = 0;
 	}
 	
 	public OfertaLaboral(String nombre, String descripcion, String ciudad, String departamento, String horario,
@@ -129,7 +129,7 @@ public class OfertaLaboral {
 		this.setImagen(image);
 		this.cantidadFav = 0;
 		this.fechaSeleccion = null;
-		this.cantidadVisitas = visitas;
+//		this.cantidadVisitas = visitas;
 	}
 	
 	public void setEstado(EstadoOL est) {

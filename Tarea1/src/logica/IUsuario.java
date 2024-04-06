@@ -1,6 +1,5 @@
 package logica;
 
-
 import java.time.LocalDate;
 
 import excepciones.EmpresaSinOfertasException;
@@ -13,7 +12,6 @@ import excepciones.UsuariosNoExistenException;
 import excepciones.ExisteUnUsuarioYaRegistradoException;
 
 import excepciones.EmpresasNoExistenException;
-
 
 public interface IUsuario {
 	public abstract boolean existeMail(String mail);

@@ -14,7 +14,6 @@ import excepciones.NoHayTiposException;
 import excepciones.NoHayPaquetesException;
 import excepciones.TipoYaAgragadoException;
 
-
 public interface IOfertaLaboral {
 	public abstract DTPaquete[] listarPaquetes() throws NoHayPaquetesException;
 	public abstract String datosPaqueteAMostrar(DTPaquete paquete);

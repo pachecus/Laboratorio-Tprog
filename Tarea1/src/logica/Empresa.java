@@ -21,7 +21,6 @@ public class Empresa extends Usuario {
 		this.descripcion = descripcion;
 		this.link = link;
 		this.ofertasLaborales = new HashMap<>();
-
 	}
 	
 	public Empresa(String nickname, String nombre, String apellido, String correo, String descripcion, String link, String contrasenia) {
@@ -30,7 +29,6 @@ public class Empresa extends Usuario {
 		this.link = link;
 		this.ofertasLaborales = new HashMap<>();
 		this.paqComprados = new ArrayList<>();
-
 	} 
 	
 	public Empresa(String nickname, String nombre, String apellido, String correo, String descripcion, String link, String contrasenia, byte[] image) {

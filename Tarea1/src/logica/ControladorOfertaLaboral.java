@@ -241,7 +241,6 @@ public class ControladorOfertaLaboral implements IOfertaLaboral {
 			throw new OfertasLaboralesNoExistenNingunaException("No existen Ofertas Laborales");
 		}
 	}
-	
 
 	public void comprarPaquete(String empresa, String paquete) throws PaqueteYaCompradoException{
 		ManejadorTipo mtTip =  ManejadorTipo.getInstancia();
@@ -360,4 +359,3 @@ public class ControladorOfertaLaboral implements IOfertaLaboral {
 	};
 
 }
-
