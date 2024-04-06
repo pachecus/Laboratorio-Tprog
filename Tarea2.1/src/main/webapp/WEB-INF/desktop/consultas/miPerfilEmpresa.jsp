@@ -110,7 +110,6 @@
 										<%
 											List<DtCompra> paquetesComprados = eInfo.getPaqComprados();
 											for(DtCompra compra : paquetesComprados){
-										  	//ACA TENDRIA QUE PONER LA LOGICA DE LOS PAQUETES COMPRADOS
 										%>
 									    <tr>
 									    	<td><a href="ConsultaPaquete?paqueteConsultado=<%=compra.getPaqComprado().getNombre()%>"><%=compra.getPaqComprado().getNombre()%></a></td>

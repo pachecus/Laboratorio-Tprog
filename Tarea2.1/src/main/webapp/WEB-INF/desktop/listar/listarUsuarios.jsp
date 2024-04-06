@@ -19,7 +19,6 @@
 						<% 
 							boolean noUsers = (boolean) request.getAttribute("NoUsersInSystem_Error");
 							if (!noUsers) {
-								//DtUsuario[] users = (DtUsuario[]) request.getAttribute("SystemUsers");
 								List<DtUsuario> users = (List<DtUsuario>) request.getAttribute("SystemUsers");
 						%>
 						<h1 class="text-center">Busqueda de Usuarios</h1>

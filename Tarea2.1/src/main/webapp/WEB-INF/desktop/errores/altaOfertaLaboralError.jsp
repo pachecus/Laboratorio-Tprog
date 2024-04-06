@@ -22,7 +22,6 @@
 						<br>
 						<% 
 							DtOfertaLaboral dtOfer = (DtOfertaLaboral) request.getAttribute("datosOferta");
-							//Map<String, DTKeyword> keys = dtOfer.getKeywords();
 							List<DtKeyword> keys = dtOfer.getDataKeywords();
 							String nomT = (String) request.getAttribute("nombreTipo");
 							String error = (String) request.getAttribute("OLrepetida");
@@ -166,39 +165,6 @@
 								</div>
 							</div>
 						</div>
-						
-						<!-- Forma de pago ->
-						<div class="form-group formulario__grupo" id="grupo__tipoCompra">
-							<label for="tipoCompra" class="form-label">Forma de Pago</label>
-							<div class="input-group">
-								<select class="form-select form-select-lg form-control custom-select" name="tipoCompra" id="tipoCompra">
-									<option selected disabled value="">Elija la forma de Pago...</option>
-									<option value="general">General</option>
-									<option value="paquete">Por Paquete</option>
-								</select>
-								<div class="input-group-append">
-									<i class="formulario__validacion-estado formulario__validacion-estado-select fa-solid fa-circle-xmark"></i>
-								</div>
-							</div>
-							<p class="formulario__input-error">Debe elegir una forma de pago.</p>
-						</div>
-							
-							<!--Paquetes comprados->
-						<div class="formulario__grupo" id="grupo__paquetes">
-							<div class="form-group paquetes-estado">
-								<label for="paquetes" class="form-label">Paquetes comprados</label>
-								<div class="input-group">
-									<select class="form-select form-select-lg form-control custom-select" name="paquetes" id="paquetes">
-										<option selected disabled value="">Elegir Paquete...</option>
-										<option value="paquetePremium">Paquete Básico</option>
-									</select>
-									<div class="input-group-append">
-										<i class="formulario__validacion-estado formulario__validacion-estado-select fa-solid fa-circle-xmark"></i>
-									</div>
-								</div>
-								<p class="formulario__input-error">Debe elegir un Paquete.</p>
-							</div>
-						</div> -->
 						<div class="formulario__grupo formulario__grupo-btn-aceptar-cancelar">
 							 <div class="row">
 								<div class="col-md-4">

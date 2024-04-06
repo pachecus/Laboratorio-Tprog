@@ -48,9 +48,6 @@ public class AltaDeUsuario extends HttpServlet {
 			apellido = request.getParameter("apellido");
 			contrasenia = request.getParameter("contrasenia");
 			tipoUsuario = request.getParameter("tipoUsuario");
-			//Part filePart = request.getPart("imagen");
-			//InputStream fileContent = filePart.getInputStream();
-			//byte[] imageData = IOUtils.toByteArray(fileContent);
 			boolean seCumpleExcepcion = false;
 
 			//Si es tipo empresa pido los datos de la empresa

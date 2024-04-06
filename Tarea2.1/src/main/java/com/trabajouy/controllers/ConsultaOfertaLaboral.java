@@ -45,8 +45,6 @@ public class ConsultaOfertaLaboral extends HttpServlet {
         List<DtKeyword> keys = port.getDTKeyword().getKeys();
         request.setAttribute("keywords", keys);
         
-        //port.agregarVisualizacion(oferta.getNombre());
-        
         if(user != null) {
             DtEmpresa emp = port.buscarEmpresa(user.getNickname());
             if (emp.getNickname() != null && emp.getNickname().equals(oferta.getDataEmpresa())) {
@@ -95,7 +93,7 @@ public class ConsultaOfertaLaboral extends HttpServlet {
         	else 
         		request.setAttribute("seleccionar_postulantes", false);
         }
-        // Forward the request to the JSP for rendering.
+        
         if((user != null && (user.getNickname()).equals(oferta.getDataEmpresa())) || (oferta.getEstado() != EstadoOL.FINALIZADA) ) {
         	request.getRequestDispatcher("/WEB-INF/desktop/consultas/consultarOferta.jsp").forward(request, response);
         }else {
@@ -115,7 +113,6 @@ public class ConsultaOfertaLaboral extends HttpServlet {
 			publicar.WebServicesService service = new publicar.WebServicesService();
 			publicar.WebServices port = service.getWebServicesPort();
 			port.cambiarEstadoOferta(EstadoOL.FINALIZADA, action);
-			//DtOfertaLaboral oferta = port.obtenerDTOfertaLaboral(action);
 			doGet(request, response);
 		}else {
 			doGet(request, response);

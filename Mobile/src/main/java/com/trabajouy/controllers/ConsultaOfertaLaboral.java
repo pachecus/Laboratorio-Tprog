@@ -54,7 +54,8 @@ public class ConsultaOfertaLaboral extends HttpServlet {
                 if (compras != null) {
                     for (int i = 0; i < compras.size(); i++) {
                     	List<DtOfertaLaboral> of = compras.get(i).getOfertasLaborales();
-                    	Boolean existeOferta = false;
+                    	@SuppressWarnings("unused")
+						Boolean existeOferta = false;
                     	for (DtOfertaLaboral item: of) {
                     		if (item.getNombre().equals(ofertaConsultada)) {
                     			existeOferta = true;
